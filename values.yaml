@@ -14,7 +14,7 @@ servicePort: 8010
 volumeMountPath: "/tmp/data"
 
 ingress:
-  host: "example.com"
+  host: "bechirnoomani-math.horizon-workspaces.com"
   tlsSecretName: "tls-secret-name"
 
 pvc:
