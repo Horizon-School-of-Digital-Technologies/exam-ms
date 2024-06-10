@@ -1,0 +1,24 @@
+replicaCount: 1
+
+image:
+  repository: bechirnoomani/mathapp-development
+  tag: latest
+
+resources:
+  memory: "64Mi"
+  cpu: "250m"
+
+containerPort: 8010
+servicePort: 8010
+
+volumeMountPath: "/tmp/data"
+
+ingress:
+  host: "example.com"
+  tlsSecretName: "tls-secret-name"
+
+pvc:
+  accessMode: "ReadWriteOnce"
+  storageClass: "gp2"
+  storageSize: "1Gi"
+  volumeMode: "Filesystem"
